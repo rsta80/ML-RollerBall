@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: RollerBallBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 8
+    vectorObservationSize: 66
     numStackedVectorObservations: 1
-    vectorActionSize: 02000000
+    vectorActionSize: 05000000
     cameraResolutions: []
     vectorActionDescriptions:
     - 
-    - 
-    vectorActionSpaceType: 1
-  model: {fileID: 5022602860645237092, guid: 786f5838562a40642aff65ab2d876a52, type: 3}
+    vectorActionSpaceType: 0
+  model: {fileID: 5022602860645237092, guid: 9b4a2b0bc2095f043a9a561431f4ecec, type: 3}
   inferenceDevice: 0

@@ -173,10 +173,12 @@
     <Compile Include="Assets\ML-Agents\Scripts\Startup.cs" />
     <Compile Include="Assets\ML-Agents\Scripts\UnityAgentsException.cs" />
     <Compile Include="Assets\ML-Agents\Scripts\Utilities.cs" />
+    <Compile Include="Assets\Scripts\CarAgent.cs" />
     <Compile Include="Assets\Scripts\RollerAcademy.cs" />
     <Compile Include="Assets\Scripts\RollerAgent.cs" />
     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Experimental.compute" />
     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Conv.compute" />
+    <None Include="Assets\Materials\GridPatternShader.shader" />
     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Random.cginc" />
     <None Include="Assets\ML-Agents\Examples\SharedAssets\Materials\ShaderRadialGrid.shader" />
     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\BarracudaReferenceImpl.compute" />
@@ -191,6 +193,8 @@
     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\FastNV.compute" />
     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Dense.compute" />
     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Generic.compute" />
+    <None Include="Assets\Materials\ShaderRadialGrid.shader" />
+    <None Include="Assets\Materials\ShaderOutline.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/arst8/UnityProjects/RollerBall/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -8,12 +8,16 @@ public class RollerAgent : Agent
     Rigidbody rBody;
     public Transform Target;
     public float speed = 10;
+    private RayPerception m_RayPer;
+    private Rigidbody m_AgentRb;
+    public bool useVectorObs;
 
     void Start()
     {
         rBody = GetComponent<Rigidbody>();
+        m_RayPer = GetComponent<RayPerception>();
     }
-    
+
     public override void AgentReset()
     {
         if (this.transform.position.y < 0)
@@ -31,14 +35,14 @@ public class RollerAgent : Agent
     }
 
     public override void CollectObservations()
-    {       
+    {
         // Target and Agent positions
         AddVectorObs(Target.position);
         AddVectorObs(this.transform.position);
 
         // Agent velocity
         AddVectorObs(rBody.velocity.x);
-        AddVectorObs(rBody.velocity.z);     
+        AddVectorObs(rBody.velocity.z);
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
@@ -57,15 +61,26 @@ public class RollerAgent : Agent
         if (distanceToTarget < 1.42f)
         {
             SetReward(1.0f);
-            Done();
+            //Done();
         }
+
 
         // Fell off platform
         if (this.transform.position.y < 0)
         {
-            Done();
+            //Done();
         }
 
     }
- 
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.CompareTag("goal"))
+        {
+            SetReward(1f);
+            //Done();
+        }
+
+    }
 }
